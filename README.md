@@ -80,17 +80,17 @@ http.get.home.response_time:100|ms
 This module also works with any `http` server
 
 ```js
-var http = require('http')
+var http = require('http');
 var expressStatsd = require('express-statsd');
 
-var monitorRequest = expressStatsd()
+var monitorRequest = expressStatsd();
 
 http.createServer(function (req, res) {
-    monitorRequest(req, res)
+    monitorRequest(req, res);
 
     // do whatever you want, framework, library, router
-    res.end('hello world')
-}).listen(3000)
+    res.end('hello world');
+}).listen(3000);
 ```
 
 ## Options
